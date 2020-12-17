@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { useState } from 'react'
 import HyggeControl from './HyggeControl'

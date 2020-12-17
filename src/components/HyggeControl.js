@@ -1,6 +1,5 @@
 import React from "react";
-import { useState } from "react";
-import hygge from "./hygge_.png";
+import hygge from "../img/hygge_.png";
 import { motion } from "framer-motion";
 
 function HyggeControl(props) {
@@ -13,8 +12,8 @@ function HyggeControl(props) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <p>
-          <span>Hygge: Portland</span>
+        <p style={{background: "blue"}}>
+          <span>◐ Hygge: Portland</span>
           <hr /> Uses the
           RealtyMole API to display rental information about selected regions of
           Portland OR. Updates every few seconds.{" "}

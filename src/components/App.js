@@ -1,11 +1,13 @@
 import React from "react";
-import { useState } from 'react';
-import Matter from './Matter';
+// import { useState } from 'react';
+import MatterControl from './MatterControl';
+import Footer from './Footer'
 import WorkPage from './WorkPage';
 import Hygge from './HyggeControl';
 import Splash from './Splash';
 import Header from "./Header";
-import { Switch, Route, useLocation, useHistory } from "react-router-dom";
+import About from './About';
+import { Switch, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import * as v from "./PageVariants";
 
@@ -22,7 +24,6 @@ function App() {
           >
             <AnimatePresence>
               <Switch location={location} key={location.pathname}>
-                <Route path='/matter' component={Matter}/>
                 <Route path="/about" component={About} />
                 <Route path="/settings" component={Settings} />
                 <Route path="/work" component={Work} />
@@ -30,6 +31,7 @@ function App() {
               </Switch>
             </AnimatePresence>
           </main>
+          <Footer/>
       </div>
     );
 
@@ -38,9 +40,9 @@ function App() {
 
 function Work() {
 
-  const [workSelection, handleWorkSelect] = useState(null);
+  // const [workSelection, handleWorkSelect] = useState(null);
 
-  const clickWorkSelect = (id) => (handleWorkSelect(workSelection = id))
+  // const clickWorkSelect = (id) => (handleWorkSelect(workSelection = id))
 
   return (
     <motion.div
@@ -56,36 +58,6 @@ function Work() {
       <Switch>
         <Route path="/hygge" component={Hygge}/>
       </Switch>
-    </motion.div>
-  );
-}
-
-function About() {
-  return (
-    <motion.div
-    style={{position: "absolute", width: "100vw"}}
-      initial="initial"
-      animate="in"
-      exit="out"
-      variants={v.pageVariants}
-      transition={v.pageTransitions}
-      className="bg-transparent about-grid-container"
-    >
-  <div class="square1"></div>
-  <div class="square2">
-  <h1>About</h1>
-      <p>
-        Let's animate transitions between React Router routes with Framer Motion
-      </p>
-      <h2>Framer Motion</h2>
-      <p>
-        Framer Motion is a great library for animations in React easily and
-        quickly.
-      </p>
-      <h2>React Router</h2>
-      <p>One of the most well known routers in the React ecosystem.</p>
-  </div>
-  <div class="square3"></div>
     </motion.div>
   );
 }

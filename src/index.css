@@ -12,11 +12,6 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(87, 85, 85);
 }
 
-/* hr {
-  margin-top: 5px;
-  margin-bottom: 5px;
-} */
-
 button {
   border: none;
   outline: none;
@@ -132,23 +127,27 @@ button:hover {
   width: 100% !important;
   padding: 10px;
   margin-top: 25vh !important;
-  background-color: transparent;
 }
 
-.splash h1{
+.splash{
+  user-select: none;
+  background: transparent !important;
   text-align: center !important;
   font-size: 10vw;
   color: rgb(87, 85, 85);
 }
 
 .splash p {
+  background: transparent !important;
   font-size: 2vw;
   text-align: center !important;
 }
 
 .squareWork:hover {
+  box-shadow: 0 40px 70px -20px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   transition-timing-function: ease;
+  border: rgb(103, 103, 240) 1px solid;
 }
 
 .squareWork img {
@@ -160,7 +159,7 @@ button:hover {
 
 .squareWork p {
   display: absolute;
-  padding: 1em;
+  padding: 1.2em;
   font-size: 12px;
 }
 
@@ -190,15 +189,13 @@ button:hover {
 }
 
 .about-grid-container {
-  margin-top: 10vh;
+  margin-top: 5vh;
   display: grid;
   grid-template-columns: 0.6fr 1.9fr 0.5fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   gap: 20px 20px;
   grid-template-areas:
     "square1 square2 square3"
-    ". . ."
-    ". . .";
 }
 
 .square1 { grid-area: square1; }
@@ -207,7 +204,14 @@ button:hover {
 
 .square3 { grid-area: square3; }
 
+#grantimg {
+  width: 100vw;
+  -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(4,0,0,2)), to(rgba(0,0,0,0)));
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,20), rgba(0,0,0,0));
+}
+
 .grant {
+  background: transparent !important;
   display: inline;
   font-family: 'Crimson Text', serif;
   transition-duration: 1s;
@@ -223,6 +227,20 @@ a {
 }
 
 .grant:hover {
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+  color: rgb(75, 116, 202);
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.grantIcon {
+  font-family: 'Crimson Text', serif;
+  transition-duration: 1s;
+  color: rgb(87, 85, 85);
+}
+
+.grantIcon:hover {
   transition-timing-function: ease-in-out;
   cursor: pointer;
   color: rgb(75, 116, 202);

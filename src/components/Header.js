@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import 
 
 const pageTransition = {
   type: "tween",
@@ -33,9 +32,9 @@ function Header() {
       variants={pageVariants}
       transition={pageTransition}
     >
-      <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+      <nav className="navbar navbar-expand-lg navbar-light bg-transparent" style={{userSelect: 'none'}}>
         <NavLink to="/" className="navbar-brand">
-          <h1 className="grant">g.e.</h1>
+          <h1 className="grantIcon">g.e.</h1>
         </NavLink>
         <div className="navbar-collapse"></div>
         <ul className="navbar-nav">

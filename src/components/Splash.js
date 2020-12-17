@@ -1,56 +1,62 @@
 import React from "react";
-import PropTypes from 'prop-types';
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Frame } from "framer"
+import MatterControl from "./MatterControl";
 
 const pageVariants = {
-
   initial: {
     y: 0,
     opacity: 0,
     scale: 0.9,
-    transition: { duration: 3 }
+    transition: { duration: 3 },
   },
   in: {
     y: 0,
     opacity: 1,
     scale: 1,
-    transition: { duration: 3 }
-  }, 
+    transition: { duration: 3 },
+    // background: 'transparent'
+  },
   out: {
     y: "10vh",
     opacity: 0,
-    scale: .8,
-    transition: { duration: 1 }
-  }
-}
-
-const pageTransitions = {
-  type: "tween",
-  ease: "anticipate",
-  duration: 3
-}
+    scale: 0.6,
+    transition: { duration: 1 },
+  },
+};
 
 function Splash() {
-  
   return (
-    <motion.div
-    style={{zIndex:1, width: "100vh"}}
-      initial="initial"
-      animate="in"
-      exit="out"
-      variants={pageVariants}
-      className="splash ">
-      
-      <h1>Hi, I'm <NavLink to="/about"><motion.div className="grant">Grant</motion.div></NavLink>.</h1>
-      <p>I write code, design stuff, and make music.</p>
-      
-    </motion.div>
+    <>
+      <motion.div
+        style={{ zIndex: 0, width: "100vh" }}
+        initial="in"
+        animate="in"
+        exit="out"
+        variants={pageVariants}
+      >
+        <MatterControl />
+      </motion.div>
+        <motion.h1
+          style={{
+            zIndex: 0,
+            width: "100vh",
+          }}
+          initial="initial"
+          animate="in"
+          exit="out"
+          variants={pageVariants}
+          className="splash"
+        >
+          Hi, I'm{" "}
+          <NavLink className="grant" to="/about">
+            <span className="grant">Grant</span>
+          </NavLink>
+          .
+        <p>I write code, design stuff, and make music.</p>
+        </motion.h1>
+    </>
   );
 }
-
-
 
 export default Splash;
