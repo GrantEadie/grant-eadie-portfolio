@@ -77,8 +77,8 @@ function MatterControl() {
       new Box(
         e.mouseX,
         e.mouseY,
-        e.random(5, 40),
-        e.random(5, 40),
+        e.random(3, 60),
+        e.random(3, 60),
         e.random(100, 255),
         e
       )

@@ -3,8 +3,12 @@
   margin: 0;
   padding: 0;
   font-family: 'Work Sans', sans-serif;
-  background-color: #f7f7f7 !important;
+  background-color: #f7f7f7;
   color: rgb(87, 85, 85);
+}
+b {
+  font-weight: 600;
+  color: rgb(80, 80, 80)
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -12,7 +16,7 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(87, 85, 85);
 }
 
-button {
+/* #button {
   border: none;
   outline: none;
   width: 100%;
@@ -25,9 +29,9 @@ button {
   transition: all 200ms ease-in-out;
 }
 
-button:hover {
+#button:hover {
   background: #3c6bd1c0;
-}
+} */
 
 .login {
   width: 100%;
@@ -147,7 +151,7 @@ button:hover {
   box-shadow: 0 40px 70px -20px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   transition-timing-function: ease;
-  border: rgb(103, 103, 240) 1px solid;
+  border: transparent 1px solid;
 }
 
 .squareWork img {
@@ -169,7 +173,7 @@ button:hover {
 }
 
 .grid-container {
-  margin-top: 10vh;
+  margin-top: 1vh;
   margin-left: 25%;
   margin-right: 25%;
   width: 50%;
@@ -189,20 +193,27 @@ button:hover {
 }
 
 .about-grid-container {
-  margin-top: 5vh;
+  margin-top: 2vh;
   display: grid;
   grid-template-columns: 0.6fr 1.9fr 0.5fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: .5fr;
   gap: 20px 20px;
   grid-template-areas:
-    "square1 square2 square3"
+    "square1 square2"
 }
 
 .square1 { grid-area: square1; }
 
 .square2 { grid-area: square2; }
 
-.square3 { grid-area: square3; }
+.square2 h1 {
+  color: rgba(0, 132, 255, 0.685);
+  font-size: 50px;
+}
+
+.square2 p {
+  font-size: 20px;
+}
 
 #grantimg {
   width: 100vw;
@@ -224,6 +235,7 @@ button:hover {
 
 a {
   text-decoration: none !important;
+  user-select: none;
 }
 
 .grant:hover {
@@ -232,6 +244,7 @@ a {
   color: rgb(75, 116, 202);
   padding-left: 15px;
   padding-right: 15px;
+  user-select: none;
 }
 
 .grantIcon {
@@ -246,4 +259,42 @@ a {
   color: rgb(75, 116, 202);
   padding-left: 15px;
   padding-right: 15px;
+}
+
+footer {
+  position: fixed;
+  display:inline;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+}
+
+footer p {
+  padding-top: 10px;
+  background: transparent !important;
+  color: rgba(112, 140, 182, 0.63);
+}
+
+.socials {
+  fill: grey;
+}
+
+.socials:hover {
+  fill: rgba(0, 132, 255, 0.685);
+}
+
+.emailContact {
+  color: rgb(94, 115, 128);
+  padding: 10px;
+  border: transparent solid 2px; 
+}
+
+.emailContact:hover {
+  border: rgba(0, 132, 255, 0.685) dotted 2px; 
+  fill: rgba(0, 132, 255, 0.685);
+}
+
+.workPageHr {
+  width: 88%;
 }

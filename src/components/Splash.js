@@ -29,7 +29,7 @@ function Splash() {
   return (
     <>
       <motion.div
-        style={{ zIndex: 0, width: "100vh" }}
+        style={{ zIndex: 0, width: "100vh", background: "transparent" }}
         initial="in"
         animate="in"
         exit="out"

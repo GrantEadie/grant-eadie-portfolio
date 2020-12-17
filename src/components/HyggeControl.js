@@ -12,7 +12,7 @@ function HyggeControl(props) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <p style={{background: "blue"}}>
+        <p>
           <span>◐ Hygge: Portland</span>
           <hr /> Uses the
           RealtyMole API to display rental information about selected regions of

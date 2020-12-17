@@ -1,6 +1,6 @@
 import React from "react";
 // import { useState } from 'react';
-import MatterControl from './MatterControl';
+import Contact from './Contact';
 import Footer from './Footer'
 import WorkPage from './WorkPage';
 import Hygge from './HyggeControl';
@@ -25,7 +25,7 @@ function App() {
             <AnimatePresence>
               <Switch location={location} key={location.pathname}>
                 <Route path="/about" component={About} />
-                <Route path="/settings" component={Settings} />
+                <Route path="/contact" component={Contact} />
                 <Route path="/work" component={Work} />
                 <Route path="/" component={Splash}/>
               </Switch>
@@ -39,10 +39,6 @@ function App() {
 
 
 function Work() {
-
-  // const [workSelection, handleWorkSelect] = useState(null);
-
-  // const clickWorkSelect = (id) => (handleWorkSelect(workSelection = id))
 
   return (
     <motion.div
@@ -58,82 +54,6 @@ function Work() {
       <Switch>
         <Route path="/hygge" component={Hygge}/>
       </Switch>
-    </motion.div>
-  );
-}
-
-function Settings() {
-  return (
-    <motion.div
-    style={{position: "absolute", width: "100vw"}}
-      initial="initial"
-      animate="in"
-      exit="out"
-      variants={v.pageVariants}
-      transition={v.pageTransitions}
-      className="bg-transparent about-grid-container"
-    >
-      <div class="square1"></div>
-  <div class="square2">
-      <div className="row">
-        <div className="col-md-8">
-          <h1>Settings</h1>
-          <form>
-            <fieldset>
-              <legend>Details</legend>
-              <div className="row">
-                <div className="col-md-6 mb-3">
-                  <label htmlFor="name">Name</label>
-                  <input type="text" id="name" className="form-control" />
-                </div>
-                <div className="col-md-6 mb-3">
-                  <label htmlFor="email">Email</label>
-                  <input type="email" id="email" className="form-control" />
-                </div>
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>Preferences</legend>
-              <div className="custom-control custom-checkbox">
-                <input
-                  type="checkbox"
-                  id="large-labels"
-                  className="custom-control-input"
-                />
-                <label htmlFor="large-labels" className="custom-control-label">
-                  Use Larger Labels
-                </label>
-              </div>
-              <div className="custom-control custom-checkbox">
-                <input
-                  type="checkbox"
-                  id="email-opt-in"
-                  className="custom-control-input"
-                />
-                <label htmlFor="email-opt-in" className="custom-control-label">
-                  Receive Notifications by Email
-                </label>
-              </div>
-              <div className="custom-control custom-checkbox">
-                <input
-                  type="checkbox"
-                  id="hide-profile-pic"
-                  className="custom-control-input"
-                />
-                <label
-                  htmlFor="hide-profile-pic"
-                  className="custom-control-label"
-                >
-                  Show Profile Image
-                </label>
-              </div>
-            </fieldset>
-          </form>
-        </div>
-      </div>
-  </div>
-  <div class="square3"></div>
     </motion.div>
   );
 }
