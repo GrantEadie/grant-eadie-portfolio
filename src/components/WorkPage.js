@@ -1,10 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import HyggeControl from "./HyggeControl";
-import AukloControl from "./AukloControl";
+import HyggeControl from "./WorkComponents/HyggeControl";
+import AukloControl from "./WorkComponents/AukloControl";
+import OutfitterControl from "./WorkComponents/OutfitterControl";
 
-function WorkPage(props) {
+function WorkPage() {
   const [workDesc, handleWorkDescView] = useState({ view: null });
 
   function onHoverWork(input) {
@@ -39,8 +40,12 @@ function WorkPage(props) {
         </motion.div>
         <motion.div
           whileHover={{ scale: 1.25, x: -20, y: -20, transition: { duration: 0.1 } }}
+          onMouseEnter={() => onHoverWork("outfitter")}
+          onMouseLeave={() => onHoverWork(null)}
           className="squareWork"
-        ></motion.div>
+        >
+          <OutfitterControl changeToDescription={workDesc} />
+        </motion.div>
         <motion.div
           whileHover={{ scale: 1.25, x: -20, y: -20, transition: { duration: 0.1 } }}
           className="squareWork"

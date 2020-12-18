@@ -1,13 +1,14 @@
 import React from "react";
-import hygge from "../img/hygge_.png";
+import outfitter from '../../img/outfitter_.png'
 import { motion } from "framer-motion";
 
-function HyggeControl(props) {
+function OutfitterControl(props) {
+
   const { changeToDescription } = props;
 
-  if (changeToDescription.view === "hygge") {
+  if (changeToDescription.view === "outfitter") {
     return (
-      <a href="https://github.com/GrantEadie/Official-Rental-API" rel="noreferrer" target="_blank">
+      <a href="https://endymion-outfitters.vercel.app/" rel="noreferrer" target="_blank">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -15,12 +16,10 @@ function HyggeControl(props) {
         transition={{ duration: .5}}
       >
         <p>
-          <span>◐ Hygge: Portland</span>
-          <hr /> Uses the 
-          <b> RealtyMole API</b> to display rental information about selected regions of
-          Portland OR. Updates every few seconds.{" "}
+          <span>⧪ Endymion Outfitters</span>
+          <hr /> Sci-fi take on a merch store with a clickable SVG body. Also the added ability to create new merch items.
           <hr/>
-          JavaScript || Node.js || jQuery
+          React || Redux || SCSS
         </p>
       </motion.div>
 
@@ -33,10 +32,10 @@ function HyggeControl(props) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <img src={hygge} alt="hygge" />
+        <img src={outfitter} alt="outfitter" />
       </motion.div>
     );
   }
 }
 
-export default HyggeControl;
+export default OutfitterControl;

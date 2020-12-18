@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'react';
-import auklo from "../img/auklo_.png";
+import auklo from "../../img/auklo_.png";
 import { motion } from "framer-motion";
 
 function AukloControl(props) {

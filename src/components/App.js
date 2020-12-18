@@ -3,7 +3,7 @@ import React from "react";
 import Contact from './Contact';
 import Footer from './Footer'
 import WorkPage from './WorkPage';
-import Hygge from './HyggeControl';
+import Hygge from './WorkComponents/HyggeControl';
 import Splash from './Splash';
 import Header from "./Header";
 import About from './About';

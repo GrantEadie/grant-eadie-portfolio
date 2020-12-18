@@ -43,13 +43,13 @@ function About() {
             Technology
           </h1>
           <p>
-            <b>C#</b> || <b>ASP.NET</b> || <b>JavaScript</b> || <b>jQuery</b> || <b>CSS/SCSS</b> || <b>HTML</b> || 
-            <b> React/Native</b> || <b>Node.js</b> || <b>MySQL</b> || <b>Firebase/Firestore</b> || <b>Jest/Babel</b> || <b>Webpack</b>
+            <b>C#</b> || <b>ASP.NET</b> || <b>JavaScript</b> || <b> React/Native</b> || <b>CSS/SCSS</b> || <b>HTML</b> || <b>Git</b> ||
+            <b> jQuery</b>  || <b>Node.js</b> || <b>MySQL</b> || <b>Firebase/Firestore</b> || <b>Jest/Babel</b> || <b>Webpack</b>
             <br />
             <br />
             5+ years of experience with the <b>Adobe Suite</b>, especially <b>Illustrator</b>.
             And like most developers these days, I've spent the last year
-            entirely on remote systems such as Slack, Discord, and Teams.
+            entirely on remote systems such as <b>Slack</b>, <b>Discord</b>, and <b>Teams</b>. As for <b>peer and mob programming</b>, I believe the best work is made using text editors in sharing mode, such as <b>VSCode</b> and <b>Codeshare</b>. 
           </p>
           <hr />
           <br /><br />
