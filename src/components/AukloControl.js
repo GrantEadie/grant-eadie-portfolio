@@ -8,7 +8,7 @@ function AukloControl(props) {
 
   if (changeToDescription.view === "auklo") {
     return (
-      <a href="https://auklo-lite-gzbfq3a6l.vercel.app/" target="_blank">
+      <a href="https://auklo-lite-gzbfq3a6l.vercel.app/" rel="noreferrer" target="_blank">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

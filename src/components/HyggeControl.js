@@ -7,7 +7,7 @@ function HyggeControl(props) {
 
   if (changeToDescription.view === "hygge") {
     return (
-      <a href="https://github.com/GrantEadie/Official-Rental-API" target="_blank">
+      <a href="https://github.com/GrantEadie/Official-Rental-API" rel="noreferrer" target="_blank">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

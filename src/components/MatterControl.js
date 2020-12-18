@@ -5,20 +5,13 @@ import { motion } from "framer-motion";
 
 let Engine = Matter.Engine,
   World = Matter.World,
-  Bodies = Matter.Bodies,
-  Mouse = Matter.Mouse,
-  MouseConstraint = Matter.MouseConstraint;
+  Bodies = Matter.Bodies;
 
 let engine;
 let world;
 let boxes = [];
 let ground1;
-let ground2;
 let canvas;
-let mouseConstraint;
-
-let x = 50;
-const y = 50;
 
 function MatterControl() {
 
@@ -68,12 +61,6 @@ function MatterControl() {
     });
     
     World.add(world, ground1);
-
-    let canvasMouse = Mouse.create(canvas.elt)
-    let options = {
-        mouse: canvasMouse
-    }
-    mouseConstraint = MouseConstraint.create(engine, options)
   };
 
   const mp = (e) => {

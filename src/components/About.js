@@ -14,7 +14,7 @@ function About() {
       transition={v.pageTransitions}
       className="bg-transparent"
     >
-      <img id="grantimg" src={grantPic} />
+      <img id="grantimg" alt="grant" src={grantPic} />
       <div className="about-grid-container" style={{marginBottom:'10vh'}}>
         <div class="square1"></div>
         <div class="square2">

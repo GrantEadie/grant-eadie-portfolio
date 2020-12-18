@@ -20,7 +20,7 @@ function WorkPage(props) {
       </div>
       <motion.div className="grid-container">
         <motion.div
-          whileHover={{ scale: 1.25, x: -20, y: -20, x: -20, y: -20, transition: { duration: 0.2 } }}
+          whileHover={{ scale: 1.25, x: -20, y: -20, transition: { duration: 0.2 } }}
           className="squareWork"
           onMouseEnter={() => onHoverWork("auklo")}
           onMouseLeave={() => onHoverWork(null)}
