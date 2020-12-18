@@ -50,6 +50,10 @@ function MatterControl() {
       return (pos.y > 1500)
     }
 
+    this.removeFromWorld = function() {
+      World.remove(world, this.body);
+    }
+
   }
 
   const setup = (p5, canvasParentRef) => {
@@ -91,11 +95,12 @@ function MatterControl() {
     for (let i = 0; i < boxes.length; i++) {
       boxes[i].show();
       if (boxes[i].isOffScreen()) {
+        boxes[i].removeFromWorld();
         boxes.splice(i, 1);
         i--
       }
     }
-    console.log(boxes.length)
+    console.log(world.bodies.length)
   };
   return (
     <motion.div>
