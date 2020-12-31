@@ -4,6 +4,7 @@ import { useState } from "react";
 import HyggeControl from "./WorkComponents/HyggeControl";
 import AukloControl from "./WorkComponents/AukloControl";
 import OutfitterControl from "./WorkComponents/OutfitterControl";
+import GravitoneControl from "./WorkComponents/GravitoneControl";
 
 function WorkPage() {
   const [workDesc, handleWorkDescView] = useState({ view: null });
@@ -20,6 +21,16 @@ function WorkPage() {
         </div>
       </div>
       <motion.div className="grid-container">
+      <motion.div
+          whileHover={{ scale: 1.25, x: -20, y: -20, transition: { duration: 0.2 } }}
+          className="squareWork"
+          onMouseEnter={() => onHoverWork("gravitone")}
+          onMouseLeave={() => onHoverWork(null)}
+        >
+          <GravitoneControl
+            changeToDescription={workDesc}
+          />
+        </motion.div>
         <motion.div
           whileHover={{ scale: 1.25, x: -20, y: -20, transition: { duration: 0.2 } }}
           className="squareWork"
@@ -46,10 +57,6 @@ function WorkPage() {
         >
           <OutfitterControl changeToDescription={workDesc} />
         </motion.div>
-        <motion.div
-          whileHover={{ scale: 1.25, x: -20, y: -20, transition: { duration: 0.1 } }}
-          className="squareWork"
-        ></motion.div>
         <motion.div
           whileHover={{ scale: 1.25, x: -20, y: -20, transition: { duration: 0.1 } }}
           className="squareWork"
